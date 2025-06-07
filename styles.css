@@ -104,29 +104,6 @@
         font-size: 1rem;
       }
     }
-    /*.about {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      padding: 50px;
-      background-color:#ffe7db;
-    }
-    
-  
-  .about-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-  }
-  
-  .about-text {
-    max-width: 600px;
-    margin-left: 30px;
-    font-size: 25px;
-    text-align: center;
-  }*/
  .about {
     display: flex;
     justify-content: space-between;
@@ -134,7 +111,9 @@
     padding: 50px;
     background-color:#ffe7db;
   }
-  
+  .about li{
+    list-style: none;
+  }
   .about-image img {
     width: 100%;
     max-width: 500px;
@@ -146,6 +125,7 @@
     margin-left: 30px;
     font-size: 25px;
     text-align: center;
+    padding: 15px;
   }
   /*testimonial*/
   .testimonial-section {
@@ -216,4 +196,96 @@
   95% { transform: translateY(-660px); }
 
   100% { transform: translateY(0); }
+}
+/* CONTAINER FOR FORMS & SECTIONS */
+.container-minimal {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* GRID LAYOUT FOR SERVICES & ADOPTION */
+.grid-3 {
+  display: grid;
+  padding: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+/* TEXT UTILITIES */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+/* CARD STYLE */
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8c42;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #e57c30;
+}
+
+/* FORMS */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: block;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff8c42;
+  box-shadow: 0 0 4px rgba(255, 140, 66, 0.5);
 }
